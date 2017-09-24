@@ -65,9 +65,25 @@ Some fake data types can be extended, like **PersonName**, **CompanyName**, etc.
 	personFaker.AddList<string>(names, DotNetFaker.Core.StringLists.PersonName);
 ```
 
+For complex types, you can inherit from **BaseGenerator**:
+
+```c#
+	public class IPGenerator : BaseGenerator<string>
+    {
+        public override string GetRandomValue()
+        {
+            return string.Format("{0}.{1}.{2}.{3}",
+                base.Random.Next(0, 255),
+                base.Random.Next(0, 255),
+                base.Random.Next(0, 255),
+                base.Random.Next(0, 255));
+        }
+    }
+```
+
 ### Generating data
 
-Use ```c#GetFake<T>``` for a single instance, and ```c#GetFake<T>(int count)``` for a ```c#List<T>```
+Use ```c# GetFake<T>``` for a single instance, and ```c# GetFake<T>(int count)``` for a ```c# List<T>```
 
 ```c#
 	Person person = personFaker.GetFake<Person>();
