@@ -1,11 +1,13 @@
 # DotNetFaker
 DotNetFaker helps on creating fake values for your c# classes.
 
-Usage is based on attributes, simply decorate your class with the Fake attribute and launch the generator.
+It is based on attributes, decorate your class with the attributes and launch the generator.
 
-##Usage
+## Usage
 
-Locate the Person class on the test project
+### Models
+
+Your models must contains the **Fake** and/or **CustomFake** attributes. Generators will use this information to generate fake data.
 
 ```c#
  public class Person
@@ -32,4 +34,44 @@ Locate the Person class on the test project
         public string RandomString { get; set; }
 
     }
+```
+
+### Generating data
+
+To make a fake data generator for this model class, create a **Faker** instance. Initially, the faker will obtain the generation rules from the class attributes.
+
 ```c#
+	Faker personFaker = new Faker();
+```
+
+If you need a custom data for any property, the **CustomFake** attribute must be used:
+
+```c#
+	personFaker.AddGenerator(new IPGenerator(), "IPGenerator");
+```
+
+### Extending data generation
+
+Some fake data types can be extended, like **PersonName**, **CompanyName**, etc. You can add data to the base arrays with the **AddList** method.
+
+```c#
+	List<string> names = new List<string>();
+	names.Add("Pepito Perez");
+	names.Add("Fulanito Antunez");
+	names.Add("Sutanito Gutierrez");
+	names.Add("Shurmano Gomez");
+	names.Add("Suprimo de los Vientos");
+
+	personFaker.AddList<string>(names, DotNetFaker.Core.StringLists.PersonName);
+```
+
+### Generating data
+
+Use ```c#GetFake<T>``` for a single instance, and ```c#GetFake<T>(int count)``` for a ```c#List<T>```
+
+```c#
+	Person person = personFaker.GetFake<Person>();
+	
+	List<Person> persons = personFaker.GetFake<Person>(10);
+```
+
