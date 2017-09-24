@@ -1,6 +1,7 @@
 ﻿namespace DotNetFaker.Core
 {
     using System;
+    using DotNetFaker.Core.Common;
 
     /// <summary>
     /// Defines a custom generator type

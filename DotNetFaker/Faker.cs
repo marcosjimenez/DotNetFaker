@@ -6,6 +6,8 @@
     using System.Reflection;
     using DotNetFaker.Core;
     using DotNetFaker.Generators;
+    using DotNetFaker.Common;
+    using DotNetFaker.Core.Common;
 
     /// <summary>
     /// Generates fake data
@@ -37,7 +39,7 @@
         public IFakeGenerator AddGenerator(IFakeGenerator customType, string name)
         {
             if (generators.ContainsKey(name))
-                throw new Exception(string.Format("Duplicate generator named {0}", name));
+                throw new DotNetFakerException(string.Format("Duplicate generator named {0}", name));
 
             customType.Random = random;
             generators.Add(name, customType);
@@ -92,7 +94,7 @@
         private IFakeGenerator getGenerator(string type)
         {
             if (!generators.ContainsKey(type))
-                throw new Exception(string.Format("Cannot find generator {0}", type));
+                throw new DotNetFakerException(string.Format("Cannot find generator {0}", type));
 
             return generators[type];
         }

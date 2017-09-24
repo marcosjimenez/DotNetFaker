@@ -1,4 +1,4 @@
-﻿namespace DotNetFaker.Core
+﻿namespace DotNetFaker.Core.Common
 {
     /// <summary>
     /// Available generators (CORE)

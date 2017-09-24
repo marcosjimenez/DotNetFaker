@@ -3,6 +3,8 @@
     public static  class Constants
     {
 
+        #region private arrays
+
         private static readonly string[] addresses = {
             "43 Framley Rd, Tonbridge TN10 4HT, Reino Unido",
             "57 Highfield Gardensprivate static readonly Grays RM16 2NT, Reino Unido",
@@ -253,11 +255,17 @@
             "Tajuana Funk  "
         };
 
+        #endregion
+
+        #region public members
 
         public static string[] Addresses => addresses;
 
         public static string[] Companies => companies;
 
         public static string[] PersonNames => personNames;
+
+        #endregion
+
     }
 }

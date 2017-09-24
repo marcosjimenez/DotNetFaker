@@ -1,5 +1,7 @@
 ﻿namespace DotNetFaker.Core
 {
+    using DotNetFaker.Core.Common;
+
     /// <summary>
     /// Defines a Fake attribute
     /// </summary>

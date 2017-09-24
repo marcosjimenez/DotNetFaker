@@ -32,18 +32,13 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\DotNetFakerException.cs" />
     <Compile Include="Core\CustomFakeAttribute.cs" />
-    <Compile Include="Core\Definitions.cs" />
+    <Compile Include="Common\Definitions.cs" />
     <Compile Include="Core\FakeAttribute.cs" />
     <Compile Include="Core\IFakeAttribute.cs" />
     <Compile Include="Core\IFakeGenerator.cs" />

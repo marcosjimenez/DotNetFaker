@@ -2,6 +2,7 @@
 {
     using System;
     using DotNetFaker.Core;
+    using DotNetFaker.Core.Common;
 
     public class Person
     {

@@ -1,5 +1,6 @@
 ﻿namespace DotNetFaker.Core
 {
+    using DotNetFaker.Core.Common;
     using System;
 
     /// <summary>
