@@ -1,4 +1,4 @@
-# DotNetFaker
+# DotNetFaker [![Version-shield]](https://raw.githubusercontent.com/marcosjimenez/dotnetfaker/master/CHANGELOG.md)
 DotNetFaker helps on creating fake values for your c# classes.
 
 It is based on attributes, decorate your class with the attributes and launch the generator.
