@@ -83,7 +83,7 @@ public class IPGenerator : BaseGenerator<string>
 
 ### Generating data
 
-Use ```c# GetFake<T>``` for a single instance, and ```c# GetFake<T>(int count)``` for a ```c# List<T>```
+Use ```GetFake<T>``` for a single instance, and ```GetFake<T>(int count)``` for a ```List<T>```
 
 ```c#
 Person person = personFaker.GetFake<Person>();
