@@ -1,5 +1,12 @@
-﻿namespace DotNetFaker.Generators
+﻿// Copyright (c) Marcos Jiménez, All rights reserved.
+// Licensed under the MIT License
+// Author:                  Marcos Jiménez
+// Created:                 2017-03-13
+// Last Modified:           2017-09-25
+
+namespace DotNetFaker.Generators
 {
+    using System;
     using System.Linq;
     using System.Collections.Generic;
     using DotNetFaker.Core;
@@ -10,9 +17,9 @@
     public class ValueFromListGenerator<T> : BaseGenerator<T>
     {
 
-        public List<T> Values { get; private set; }
+        public List<T> Values { get; protected set; }
 
-        public ValueFromListGenerator(T[] list)
+        public ValueFromListGenerator (T[] list)
         {
             Values = list.ToList();
         }

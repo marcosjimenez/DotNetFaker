@@ -1,9 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using DotNetFaker;
+﻿// Copyright (c) Marcos Jiménez, All rights reserved.
+// Licensed under the MIT License
+// Author:                  Marcos Jiménez
+// Created:                 2017-03-13
+// Last Modified:           2017-09-25
 
 namespace DotNetFakerTest
 {
+    using System;
+    using System.Collections.Generic;
+    using DotNetFaker;
+    using DotNetFaker.Core.Common;
+
     class Program
     {
         static void Main(string[] args)
@@ -23,7 +30,7 @@ namespace DotNetFakerTest
             names.Add("Suprimo de los Vientos");
 
             // Add values to Person name generator
-            personFaker.AddList<string>(names, DotNetFaker.Core.StringLists.PersonName);
+            personFaker.AddList<string>(names, StringLists.PersonName);
 
             //
             // Test model
