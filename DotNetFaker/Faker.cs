@@ -1,4 +1,10 @@
-﻿namespace DotNetFaker
+﻿// Copyright (c) Marcos Jiménez, All rights reserved.
+// Licensed under the MIT License
+// Author:                  Marcos Jiménez
+// Created:                 2017-03-13
+// Last Modified:           2017-09-25
+
+namespace DotNetFaker
 {
     using System;
     using System.Collections.Generic;
